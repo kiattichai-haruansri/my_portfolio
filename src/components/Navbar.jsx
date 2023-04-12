@@ -12,7 +12,7 @@ const Navbar = () => {
                     ['Certificates', '/cert'],
                     ['Contact', '/contact'],
                 ].map(([title, url]) => (
-                    <div className='flex flex-row h-4/6 w-9/12 justify-center items-center'>
+                    <div className='flex flex-row h-4/6 w-9/12 justify-center items-center' key={title}>
                         <Link href={url}>
                             <div className='relative after:opacity-0 hover:after:opacity-100 before:opacity-0 hover:before:opacity-100 hover:before:animate-ping hover:after:animate-ping before:left-0 before:text-black before:content-[">>"] after:right-0 after:text-black after:content-["<<"] '>
                                 <span className='p-3 hover:p-0 text-base'>{title}</span>

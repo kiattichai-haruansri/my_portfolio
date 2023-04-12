@@ -3,6 +3,7 @@ import Image from 'next/image';
 import profile from '@/img/profile.jpg';
 import SlideSkilled from '@/components/SlideSkilled';
 import Link from 'next/link';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const IndexPage = () => {
 

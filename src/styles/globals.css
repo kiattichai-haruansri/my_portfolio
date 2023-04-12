@@ -9,14 +9,7 @@
   box-sizing: border-box;
 }
 
-.slick-prev:before {
-  content: "<";
-  color: red;
-  font-size: 30px;
-}
 
-.slick-next:before {
-  content: ">";
-  color: red;
-  font-size: 30px;
+.map-container {
+  height: 400px;
 }
