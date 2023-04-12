@@ -3,7 +3,7 @@ import { getProjectById } from '@/pages/api/getWorks';
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 
-const Post = () => {
+const Work = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -33,8 +33,8 @@ const Post = () => {
           <div className='p-5 text-base h-full w-full overflow-scroll'>
             <div>{item.content}</div>
             <div className='flex justify-around my-3'>
-              <Link href={item.project_url} target='blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Visit this project</Link>
-              <Link href={item.code_url} target='blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Source code</Link>
+              <Link href={item.project_url} target='_blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Visit this project</Link>
+              <Link href={item.code_url} target='_blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Source code</Link>
               <Link href={'/works'} className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Back to works</Link>
             </div>
           </div>
@@ -44,4 +44,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default Work;

@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Navbar = () => {
     return (
         <nav className='w-full h-fit md:h-16 border-b border-black flex flex-col md:flex-row justify-between items-center p-5'>
-            <div className='text-3xl mb-5 md:mb-0'>Kiattichai Haruansri</div>
+            <div className='text-3xl mb-5 md:mb-0' id="typing-container">Kiattichai Haruansri</div>
             <div className='grid grid-rows-1 grid-cols-4 h-full w-full md:w-3/5 place-items-stretch'>
                 {[
                     ['Home', '/'],
