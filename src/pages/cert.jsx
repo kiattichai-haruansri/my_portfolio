@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { getCert } from './api/getCert';
+import { getCert } from '@/pages/api/getCert';
 
 const certs = () => {
   const [certItem, setcertItem] = useState([]);

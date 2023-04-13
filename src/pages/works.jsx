@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { getWorks } from './api/getWorks'
+import { getWorks } from '@/pages/api/getWorks'
 
 const works = () => {
   const [projectsItems, setProjectsItems] = useState([]);
