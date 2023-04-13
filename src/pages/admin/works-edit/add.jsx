@@ -134,7 +134,7 @@ export default function UploadForm() {
                     >
                         Submit
                     </button>
-                    <Link className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mx-5" href={"/admin/CertForm"}>Back to works Admin</Link>
+                    <Link className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mx-5" href={"/admin/WorksForm"}>Back to works Admin</Link>
                 </form>
             </div>
         </div>

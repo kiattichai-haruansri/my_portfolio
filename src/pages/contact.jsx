@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,29 +10,53 @@ import github from '@/img/contact_icon/github.png'
 import phone from '@/img/contact_icon/phone-call.png'
 import home from '@/img/contact_icon/home.png'
 
+import {
+    collection,
+    addDoc,
+} from "firebase/firestore";
+import { db } from '@/confic/firebase'
+
 const contact = () => {
+
+    const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
+    const [contact, setContact] = useState("")
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await addDoc(collection(db, "Contact"), {
+                Email: email,
+                Name: name,
+                Contact: contact,
+            });
+            console.log("Document successfully written!");
+        } catch (error) {
+            console.error("Error writing document: ", error);
+        }
+    };
+
     return (
         <div className='flex h-full lg:h-[calc(100vh_-_64px)] items-center justify-center'>
             <div className='flex flex-col p-4 w-11/12  h-4/5 border border-black border-solid rounded-3xl my-6 lg:my-0'>
                 <div className='text-3xl text-center'>Contact me</div>
                 <div className='flex flex-col-reverse lg:flex-row w-full h-[calc(100%_-_36px)]'>
                     <div className='flex-1 flex flex-col'>
-                        <form className='flex flex-col justify-around grow h-[50vh] md:h-auto mt-2 md:mt-0'>
+                        <form className='flex flex-col justify-around grow h-[50vh] md:h-auto mt-2 md:mt-0' onSubmit={handleSubmit}>
                             <div className='h-1/6'>
                                 <div>Your's E-mail</div>
-                                <input type="text" placeholder="E-mail" className='border-b border-black w-full p-1' />
+                                <input type="emial" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} className='border-b border-black w-full p-1' />
                             </div>
                             <div className='h-1/6'>
                                 <div>Your's Name</div>
-                                <input type="text" placeholder="Namel" className='border-b border-black w-full p-1' />
+                                <input type="text" placeholder="Namel" value={name} onChange={(e) => setName(e.target.value)} className='border-b border-black w-full p-1' />
                             </div>
                             <div className='grow'>
                                 <div>Contact</div>
-                                <textarea placeholder='Type here...' className='border border-black w-full h-5/6 rounded-lg p-1' />
+                                <textarea placeholder='Type here...' value={contact} onChange={(e) => setContact(e.target.value)} className='border border-black w-full h-5/6 rounded-lg p-1' />
                             </div>
                             <div className='flex justify-around items-center h-1/6'>
-                                <div className='border border-black p-2 rounded-lg'><input type="button" value="Submit" className='hover:underline' /></div>
-                                <div className='border border-black p-2 rounded-lg'><input type="button" value="Cancel" className='hover:underline' /></div>
+                                <div className='border border-black p-2 rounded-lg'><input type="submit" value="Submit" className='hover:underline' /></div>
                             </div>
                         </form>
                     </div>

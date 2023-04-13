@@ -150,7 +150,7 @@ const Work = () => {
                         </div>
                         <div className='flex justify-around my-3'>
                             <Link href={item.pic_url} target='_blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>See full picture</Link>
-                            <Link href={'/admin/workForm'} className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Back to work Admin</Link>
+                            <Link href={'/admin/WorksForm'} className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Back to work Admin</Link>
                         </div>
                         <div className='flex justify-between'>
                             <label htmlFor="file" className="block text-gray-700 font-bold mb-2">
