@@ -67,7 +67,7 @@ export default function UploadForm() {
     return (
         <div>
             <div className="p-8 rounded-md">
-                <div className="text-3xl">Add Certificate Data</div>
+                <div className="text-3xl">Add Project Data</div>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="title" className="block text-gray-700 font-bold mb-2">
