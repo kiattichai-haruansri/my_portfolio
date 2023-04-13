@@ -22,8 +22,8 @@ const works = () => {
           <div className='w-full h-4/5 grid grid-cols-2 md:grid-cols-4 place-items-center'>
             {certItem.map((item) => (
               <div className='flex flex-col w-full h-full p-4 hover:p-0' key={item.id}>
-                <Link href={`/cert/${item.id}`}>
-                  <img src={item.pic_url} alt='projectpic' className='object-cover h-3/5 w-full rounded-xl' />
+                <Link href={`/cert/${item.id}`} className='h-full w-full'>
+                  <img src={item.pic_url} alt='projectpic' className='object-contain h-3/5 w-full rounded-xl' />
                   <div className='h-2/5 w-full flex flex-col items-center justify-center p-2'>
                     <div className='flex text-sm lg:text-lg justify-center items-center h-12 w-full border-y border-solid border-black'>
                       <div className="text-black">View {item.title}</div>

@@ -29,7 +29,7 @@ const Work = () => {
       <div className='flex flex-col p-4 w-11/12  h-4/5 border border-black border-solid rounded-3xl my-6 lg:my-0'>
         <h1 className='text-2xl md:text-2xl text-center mb-5 md:mb-0 p-1'>Project name : {item.title}</h1>
         <div className='flex flex-col lg:flex-row h-[calc(100%_-_36px)] w-full'>
-          <img src={item.pic_url} alt='projectpic' className='object-cover h-full w-auto rounded-xl' />
+          <img src={item.pic_url} alt='projectpic' className='object-contain h-full w-auto rounded-xl' />
           <div className='p-5 text-base h-full w-full overflow-scroll'>
             <div>{item.content}</div>
             <div className='flex justify-around my-3'>
