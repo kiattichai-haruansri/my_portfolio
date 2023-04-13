@@ -12,6 +12,8 @@ import {
   getDocs,
   deleteDoc,
 } from "firebase/firestore";
+import Link from "next/link";
+
 
 import { db, storage } from "@/confic/firebase";
 
@@ -31,7 +33,7 @@ export default function UploadForm() {
       return;
     }
 
-    const storageRef = ref(storage, `skilled_icon/${file.name.toLowerCase()}`);
+    const storageRef = ref(storage, `skilled_icon/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
@@ -71,7 +73,7 @@ export default function UploadForm() {
         await deleteDoc(doc.ref);
       });
       console.log("Delete Success")
-      setTitle("");
+      setTitleD("");
     }
   };
 
@@ -135,8 +137,12 @@ export default function UploadForm() {
           </button>
         </form>
       </div>
-      <div className=" p-8 rounded-md">
+      <div className=" p-8 rounded-md flex flex-col lg:flex-row justify-between">
         <div className="text-3xl">The update function is not necessary. just delete and add a new one</div>
+
+        <Link className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-fit"
+          href="/admin" >Back to Admin</Link>
+
       </div>
     </div>
   );

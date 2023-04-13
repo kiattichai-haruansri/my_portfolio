@@ -30,8 +30,8 @@ const Work = () => {
         <h1 className='text-2xl md:text-2xl text-center mb-5 md:mb-0 p-1'>Project name : {item.title}</h1>
         <div className='flex flex-col lg:flex-row h-[calc(100%_-_36px)] w-full'>
           <img src={item.pic_url} alt='projectpic' className='object-contain h-full w-auto rounded-xl' />
-          <div className='p-5 text-base h-full w-full overflow-scroll'>
-            <div>{item.content}</div>
+          <div className='p-5 text-base h-full w-full flex flex-col'>
+            <div className='h-full w-full overflow-scroll'>{item.content}</div>
             <div className='flex justify-around my-3'>
               <Link href={item.project_url} target='_blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Visit this project</Link>
               <Link href={item.code_url} target='_blank' className='text-xs md:text-base border border-black p-2 rounded-lg h-fit w-fit'>Source code</Link>
