@@ -44,11 +44,11 @@ const Contact = () => {
                     <div className='flex-1 flex flex-col'>
                         <form className='flex flex-col justify-around grow h-[50vh] md:h-auto mt-2 md:mt-0' onSubmit={handleSubmit}>
                             <div className='h-1/6'>
-                                <div>Your's E-mail</div>
+                                <div>Your&#39;s E-mail</div>
                                 <input type="emial" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} className='border-b border-black w-full p-1' />
                             </div>
                             <div className='h-1/6'>
-                                <div>Your's Name</div>
+                                <div>Your&#39;s Name</div>
                                 <input type="text" placeholder="Namel" value={name} onChange={(e) => setName(e.target.value)} className='border-b border-black w-full p-1' />
                             </div>
                             <div className='grow'>
