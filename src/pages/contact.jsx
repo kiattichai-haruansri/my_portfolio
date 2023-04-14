@@ -16,7 +16,7 @@ import {
 } from "firebase/firestore";
 import { db } from '@/confic/firebase'
 
-const contact = () => {
+const Contact = () => {
 
     const [email, setEmail] = useState("")
     const [name, setName] = useState("")
@@ -103,4 +103,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact

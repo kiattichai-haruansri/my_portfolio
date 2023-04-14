@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import { db } from "@/confic/firebase";
 
-const certs = () => {
+const Certs = () => {
     const [certItem, setcertItem] = useState([]);
 
     useEffect(() => {
@@ -93,4 +93,4 @@ const certs = () => {
     )
 }
 
-export default certs
+export default Certs

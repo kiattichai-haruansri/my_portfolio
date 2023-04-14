@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import { db } from "@/confic/firebase";
 
-const works = () => {
+const Works = () => {
     const [worksItem, setworksItem] = useState([]);
 
     useEffect(() => {
@@ -95,4 +95,4 @@ const works = () => {
     )
 }
 
-export default works
+export default Works

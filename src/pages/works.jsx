@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { getWorks } from '@/pages/api/getWorks'
 
-const works = () => {
+const Works = () => {
   const [projectsItems, setProjectsItems] = useState([]);
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const works = () => {
   )
 }
 
-export default works
+export default Works
