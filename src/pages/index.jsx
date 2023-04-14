@@ -24,7 +24,7 @@ const IndexPage = () => {
                 ['Study level', 'Secondary 5'],
                 ['GPA', '...'],
               ].map(([title, content]) => (
-                <div className='flex items-center text-sm md:text-lg'>{title} : {content}</div>
+                <div className='flex items-center text-sm md:text-lg' key={title}>{title} : {content}</div>
               ))}
             </div>
           </div>
@@ -39,7 +39,7 @@ const IndexPage = () => {
             ['Certificates', '/cert'],
             ['Contact', '/contact'],
           ].map(([title, url]) => (
-            <div className='flex justify-center items-center h-12 w-36 border-y border-solid border-black hover:w-48 m-10 md:m-0'>
+            <div className='flex justify-center items-center h-12 w-36 border-y border-solid border-black hover:w-48 m-10 md:m-0' key={title}>
               <Link href={url}>
                 <div className='relative after:opacity-0 hover:after:opacity-100 before:opacity-0 hover:before:opacity-100 before:left-0 before:text-black before:content-[">>"] after:right-0 after:text-black after:content-["<<"] '>
                   <span className='p-3 hover:p-0 text-lg hover:text-2xl'>{title}</span>
